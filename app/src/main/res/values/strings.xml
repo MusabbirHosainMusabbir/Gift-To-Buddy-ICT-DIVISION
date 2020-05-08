@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">GiftToBuddy</string>
+    <string name="aboutme">About Me</string>
+    <string name="name">Ibrahim Khalil</string>
+    <string name="location">Ramupura,Dhaka</string>
+    <string name="gift_number">25</string>
+    <string name="gift_receive">gift receive</string>
+    <string name="gift_provide">gift provide</string>
+    <string name="profile">Profile Details</string>
+    <string name="proffesion">Profession</string>
+    <string name="social_link">Social Link</string>
+    <string name="profile_activity">Profile</string>
+    <string name="save">Save</string>
+    <string name="category">Category</string>
+    <string name="seeall">See all</string>
+
+    <string name="imlookingfora">I\'m Looking for a...</string>
+    <string name="connectsociallink">Connect Social Link</string>
+    <string name="topwantedgift">Top Wanted Gift</string>
+    <string name="trendingnow">Trending Now</string>
+    <string name="giftpublished">Gift Published</string>
+    <string name="itsreadytogo">I\'ts ready to give</string>
+    <string name="keepbrowsing">Keep Browsing</string>
+    <string name="keeptracking">Keep Tracking</string>
+    <string name="profile_details">Ibrahim khalil is the marketing executive of arena.he overseas executive training for the organization internal stuffs and board of directors.Ibrahim holds a degree of management in U.S.A</string>
+
+
+    <string name="facebook_app_id">533927600863604</string>
+    <string name="fb_login_protocol_scheme">fb533927600863604</string>
+
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="app_id">1059420324433709</string>
+    <string name="redirect_url">https://socialsizzle.heroku.com/auth/</string>
+</resources>

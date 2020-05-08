@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".Views.PublishPost">
+    //Main View Port
+    //0.93
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.93"
+        android:background="@drawable/splash_bg"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:gravity="center">
+        //title bar
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:weightSum="3"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_weight="0.8">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:elevation="5dp"
+                    android:src="@drawable/back_btn"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:text="Categories"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.2"
+            android:id="@+id/container">
+            <!-- Main content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_corner_bg"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="25dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line_bg"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Categories"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/intro_title_color"/>
+                            <LinearLayout
+                                android:id="@+id/categoryLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <com.google.android.flexbox.FlexboxLayout
+                                    android:id="@+id/mainRecepientLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    app:alignContent="flex_start"
+                                    app:alignItems="flex_start"
+                                    app:flexWrap="wrap" />
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="30dp"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:text="Accessories"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:background="@drawable/selected_capsule"-->
+<!--                                    android:textColor="@color/intro_title_color"/>-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="30dp"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:text="Device"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:background="@drawable/unselected_capsule"-->
+<!--                                    android:textColor="@color/intro_title_color"/>-->
+<!--                                <TextView-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="30dp"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:text="Food"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:background="@drawable/unselected_capsule"-->
+<!--                                    android:textColor="@color/intro_title_color"/>-->
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="3"
+                            android:orientation="vertical"
+
+                            android:background="@drawable/bottom_line_bg">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.75"
+                                android:gravity="center|left"
+                                android:text="Add Gift Item Images"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/intro_title_color"/>
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycleview"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:id="@+id/add_btn"
+                                        android:layout_width="100dp"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/add_icon"/>
+
+
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:focusableInTouchMode="true"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Product Title"
+                                    android:textSize="14sp"/>
+                                <EditText
+                                    android:id="@+id/productTitleEdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:text=""
+                                    android:background="@null"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Product Description"
+                                    android:textSize="14sp"/>
+                                <EditText
+                                    android:id="@+id/productDescriptionEdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:text=""
+                                    android:background="@null"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Reason For Gift"
+                                    android:textSize="14sp"/>
+                                <EditText
+                                    android:id="@+id/resaonEdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:text=""
+                                    android:background="@null"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Target To Gift"
+                                    android:textSize="14sp"/>
+                                <EditText
+                                    android:id="@+id/targetEdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:text=""
+                                    android:background="@null"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Your Location"
+                                    android:textSize="14sp"/>
+                                <EditText
+                                    android:id="@+id/locationEdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:text=""
+                                    android:background="@null"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:weightSum="3.5"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bottom_line_bg">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center|left"
+                                    android:text="Condition"
+                                    android:textSize="14sp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1.5">
+
+                                    <Button
+                                        android:id="@+id/usedBtn"
+                                        android:layout_width="120dp"
+                                        android:text="NEW"
+                                        android:background="@drawable/newbg"
+                                        android:layout_height="match_parent"/>
+
+                                    <Button
+                                        android:id="@+id/newBtn"
+                                        android:layout_width="120dp"
+                                        android:text="USED"
+                                        android:textColor="@color/white"
+                                        android:layout_marginLeft="15dp"
+                                        android:background="@drawable/used"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:weightSum="2"
+                            >
+                            <Button
+                                android:id="@+id/publish_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:text="Publish"
+                                android:textAllCaps="false"
+                                android:textColor="#ffff"
+                                android:textSize="18sp"
+                                android:background="@drawable/button_bg_rounded_corner"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+    //semi transparent soft key layout
+    //0.07
+    <LinearLayout
+        android:id="@+id/soft_key_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="vertical"
+        android:background="@color/intro_description_color">
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

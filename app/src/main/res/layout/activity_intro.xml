@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.IntroActivity"
+    android:background="@color/bg_color"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/screen_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|bottom"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/top_corner_bg"
+            android:layout_weight="1.2"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:weightSum="5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:weightSum="3.3"
+                android:gravity="center|bottom"
+                android:layout_weight="3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/intro_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|top"
+                        android:text="The Perfect Way to Gift Anything"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_weight="1.2"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.8"
+                    android:orientation="horizontal"
+                    android:gravity="center|bottom"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/intro_description"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Descrition here suyity wertob gotinh lockins qoitru mnvjrjrnf"
+                        android:layout_weight="1.7"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.6"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:gravity="bottom|center">
+                <TextView
+                    android:id="@+id/register_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Register"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_indicator"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:tabBackground="@drawable/indicator_selector">
+
+                </com.google.android.material.tabs.TabLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center|right">
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/next"
+                        android:layout_gravity="center|left"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

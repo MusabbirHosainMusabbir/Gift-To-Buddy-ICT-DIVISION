@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    android:orientation="vertical"
+    android:background="#FCD969">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:weightSum="5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"/>
+        <ImageView
+            android:layout_weight="2.5"
+            android:layout_width="@dimen/img_width_height"
+            android:layout_height="0dp"
+            android:background="@drawable/illustrationanim" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Request Sent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:textColor="@color/intro_title_color"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:text="Just wait a patiently and tack your request. We hope you will get the  gift soon"
+            android:textAlignment="center"
+            android:textColor="#1F2045"
+            android:textSize="@dimen/slide_desc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:text="@string/keeptracking"
+            android:id="@+id/read_btn"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:background="@drawable/buttoncolor"
+            android:layout_marginBottom="16dp"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

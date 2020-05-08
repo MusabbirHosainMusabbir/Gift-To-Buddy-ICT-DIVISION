@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".Views.Categories">
+    //Main View Port
+    //0.93
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.93"
+        android:background="@drawable/splash_bg"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:gravity="center">
+        //title bar
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:weightSum="3"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_weight="0.8">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:elevation="5dp"
+                    android:src="@drawable/back_btn"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:text="Categories"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2.2">
+            <Button
+                android:id="@+id/myRequest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:text="My Request (0)"
+                android:textColor="@color/white"
+                android:background="@drawable/selected_capsule"/>
+            <Button
+                android:id="@+id/getRequest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:text="Get Requests (0)"
+                android:textColor="@color/white"
+                android:background="@drawable/unselected_capsule"/>
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.8"
+            android:id="@+id/container">
+            <!-- Main content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:weightSum="5">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:padding="10dp"
+                    android:background="@drawable/top_corner_bg"
+                    android:layout_weight="4.8">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottom_navigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:elevation="8dp"
+                        app:menu="@menu/bottom_nav_menu"
+                        android:background="@color/white" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:padding="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/transparent">
+                    <ImageView
+                        android:id="@+id/post_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/circular_bg"
+                        android:src="@drawable/add" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </LinearLayout>
+    //semi transparent soft key layout
+    //0.07
+    <LinearLayout
+        android:id="@+id/soft_key_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="vertical"
+        android:background="@color/intro_description_color">
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3C26E9</color>
+    <color name="colorPrimaryDark">#3C26E9</color>
+    <color name="colorAccent">#CD333232</color>
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+
+    <!-- colors for tab and screent text -->
+
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="transparent">#00C0C0C0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+    <color name="bg_color">#3C26E9</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="cardback">#FAF8F8</color>
+    <color name="sub_text">#C4BCFF</color>
+    <color name="gift_text_color">#222534</color>
+    <color name="sub_text_color">#80222534</color>
+    <color name="textcolor">#00D5C3</color>
+    <color name="white">#F6F7F8</color>
+    <color name="textcolorprofileuser">#222534</color>
+    <color name="categorycolor">#233558</color>
+    <color name="seeall">#3C26E9</color>
+    <color name="customcolor">#868686</color>
+    <color name="time">#27AE60</color>
+    <color name="cardcolor">#F9F9FC</color>
+    <color name="buttoncolor">#333333</color>
+    <color name="background">#ECEEF0</color>
+    <color name="colortext">#233558</color>
+    <color name="purple">#673AB7</color>
+    <color name="cancel">#EB5757</color>
+    <color name="stroke_color">#6BF6F8</color>
+
+</resources>
